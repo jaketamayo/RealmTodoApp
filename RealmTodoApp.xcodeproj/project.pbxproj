@@ -13,6 +13,7 @@
 		CFF3D82C28932D6700061DD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF3D82B28932D6700061DD8 /* Preview Assets.xcassets */; };
 		CFF3D8342893336700061DD8 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CFF3D8332893336700061DD8 /* Realm */; };
 		CFF3D8362893336700061DD8 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFF3D8352893336700061DD8 /* RealmSwift */; };
+		CFF3D8392893357500061DD8 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF3D8382893357500061DD8 /* ToDoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		CFF3D82628932D6500061DD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CFF3D82828932D6700061DD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFF3D82B28932D6700061DD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CFF3D8382893357500061DD8 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF3D82428932D6500061DD8 /* RealmTodoAppApp.swift */,
+				CFF3D8372893355000061DD8 /* Models */,
 				CFF3D82628932D6500061DD8 /* ContentView.swift */,
 				CFF3D82828932D6700061DD8 /* Assets.xcassets */,
 				CFF3D82A28932D6700061DD8 /* Preview Content */,
@@ -69,6 +72,14 @@
 				CFF3D82B28932D6700061DD8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CFF3D8372893355000061DD8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CFF3D8382893357500061DD8 /* ToDoModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			files = (
 				CFF3D82728932D6500061DD8 /* ContentView.swift in Sources */,
 				CFF3D82528932D6500061DD8 /* RealmTodoAppApp.swift in Sources */,
+				CFF3D8392893357500061DD8 /* ToDoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
