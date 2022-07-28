@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class ToDo: Object, ObjectKeyIdentifiable {
+class ToDoModel: Object, ObjectKeyIdentifiable {
   /// Create a Primary Key
   @Persisted(primaryKey: true) var id: ObjectId
   
@@ -16,9 +16,10 @@ class ToDo: Object, ObjectKeyIdentifiable {
   // Making a property as Persisted will guarantee a default value
   @Persisted var name: String
   @Persisted var completed: Bool = false
+  @Persisted var urgancy: Urgency = .nuetral
   
   //Urgency is Int so it can be sorted easily based on importance
-  enum Urgency: Int {
+  enum Urgency: Int, PersistableEnum{
     case trivial, nuetral, urgent
     
     var text: String {
@@ -31,5 +32,11 @@ class ToDo: Object, ObjectKeyIdentifiable {
           return "Urgent"
       }
     }
+  }
+  
+  // Create a convenience init
+  convenience init(name: String) {
+    self.init()
+    self.name = name
   }
 }
