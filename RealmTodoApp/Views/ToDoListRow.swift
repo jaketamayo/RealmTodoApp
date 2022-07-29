@@ -20,10 +20,12 @@ struct ToDoListRow: View {
         // This prevents the entire row from being selected when you tap on the circle button
         .buttonStyle(.plain)
         TextField("Todo List", text: $toDo.name)
+        
         Spacer()
+        
         Button {
           $toDo.urgancy.wrappedValue = toDo.cycleUrgency()
-        }label: {
+        } label: {
           Text(toDo.urgancy.text)
             .padding(5)
             .frame(width: 80)

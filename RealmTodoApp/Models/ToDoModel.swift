@@ -9,18 +9,21 @@ import SwiftUI
 import RealmSwift
 
 class ToDoModel: Object, ObjectKeyIdentifiable {
-  /// Create a Primary Key
+  
+  // Create a Primary Key
   @Persisted(primaryKey: true) var id: ObjectId
   
   // Use @Persisted property wrapper to have the data managed by Realm
   // Making a property as Persisted will guarantee a default value
   @Persisted var name: String
+  
   // This will be used for the checkmark when completing a task
   @Persisted var completed: Bool = false
   @Persisted var urgancy: Urgency = .nuetral
   
   //Urgency is Int so it can be sorted easily based on importance
   enum Urgency: Int, PersistableEnum{
+    
     case trivial, nuetral, urgent
     
     var text: String {

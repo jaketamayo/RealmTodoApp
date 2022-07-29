@@ -22,6 +22,7 @@ struct ToDoListView: View {
               .focused($keyBoard, equals: true)
               
             Spacer()
+            
             Button {
               let newToDo = ToDoModel(name: add)
               $toDos.append(newToDo)
@@ -36,8 +37,9 @@ struct ToDoListView: View {
           .padding()
           List {
             ForEach(toDos) { toDo in
-              Text(toDo.name)
+              ToDoListRow(toDo: toDo)
             }
+            .onDelete(perform: $toDos.remove)
           }
         }
         .navigationTitle("ToDo List")
